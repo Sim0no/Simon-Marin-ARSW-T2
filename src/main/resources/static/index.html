@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Covid-19</title>
+    <title>COVID 19</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,7 +15,11 @@
     <script src="js/map.js"></script>
     <script src="js/apiclient.js"></script>
     <script src="js/app.js"></script>
-
+    <style>
+        body {
+          background-color: rgb(214, 198, 194);
+        }
+        </style>
 
 
 
@@ -31,7 +35,7 @@
     <br>
     <div class="row">
         <table class="table table-bordered">
-            <thread>
+            <thread class="thead-dark">
                 <tr>
                     <th scope="col">Country</th>
                     <th scope="col">Num Deaths</th>
@@ -39,7 +43,7 @@
                     <th scope="col">Num Cured</th>
                 </tr>
             </thread>
-            <tbody id ="todosLosPaises" onload="app.generarTabla"></tbody>
+            <tbody class="table-primary" id ="todosLosPaises" onload="app.generarTabla"></tbody>
         </table>
     </div>
     <br>
