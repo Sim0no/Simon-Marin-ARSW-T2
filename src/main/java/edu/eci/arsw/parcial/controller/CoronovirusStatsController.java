@@ -10,23 +10,25 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+/**
+ * Controlador de estadisticas del covid19
+ */
 @RestController
 @RequestMapping("/covid19")
 public class CoronovirusStatsController {
     @Autowired
-    CoronavirusStatsService coronavirusStatsService;
+    CoronavirusStatsService statsService;
 
     /**
      *
-     * @param country Es el país el cual quieres consultar su información con respecto al Covid19
-     * @return Es una respuesta HTTP
+     * @param pais El pais por el cual se desea consultar acerca del Covid19
+     * @return Respuesta HTTP
      */
-    @RequestMapping(value = "/getCasesByCountry/{country}",method = RequestMethod.GET)
-    public ResponseEntity<?> getCasesByCountry(@PathVariable String country){
+    @RequestMapping(value = "/getCasesByCountry/{pais}",method = RequestMethod.GET)
+    public ResponseEntity<?> getCasesByCountry(@PathVariable String pais){
 
         try {
-            String stats = coronavirusStatsService.getCovidStatsByName(country);
+            String stats = statsService.getCovidStatsByName(pais);
             return new ResponseEntity<>(stats, HttpStatus.OK);
         } catch (CoronavirusStatsException e) {
             Logger.getLogger(CoronovirusApiMain.class.getName()).log(Level.SEVERE, null, e);
@@ -38,12 +40,12 @@ public class CoronovirusStatsController {
 
     /**
      *
-     * @return Es una respuesta HTTP
+     * @return Respuesta HTTP
      */
     @RequestMapping(value="/getAllCases")
     public ResponseEntity<?> getAllCases(){
         try {
-            String stats = coronavirusStatsService.getCovidStatsAll();
+            String stats = statsService.getCovidStatsAll();
             return new ResponseEntity<>(stats, HttpStatus.OK);
         } catch (CoronavirusStatsException e) {
             Logger.getLogger(CoronovirusApiMain.class.getName()).log(Level.SEVERE, null, e);

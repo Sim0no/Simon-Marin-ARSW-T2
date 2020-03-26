@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="coronavirusAPITest.UnirestTest" time="2.659" tests="2" errors="0" skipped="0" failures="0">
+<testsuite name="coronavirusAPITest.UnirestTest" time="3.978" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="13.0.2+8"/>
@@ -59,6 +59,6 @@
     <property name="sun.stdout.encoding" value="cp850"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="shouldReturnAllCases" classname="coronavirusAPITest.UnirestTest" time="2.548"/>
-  <testcase name="shouldReturnCaseByCountry" classname="coronavirusAPITest.UnirestTest" time="0.111"/>
+  <testcase name="shouldReturnAllCases" classname="coronavirusAPITest.UnirestTest" time="3.976"/>
+  <testcase name="shouldReturnCaseByCountry" classname="coronavirusAPITest.UnirestTest" time="0.002"/>
 </testsuite>

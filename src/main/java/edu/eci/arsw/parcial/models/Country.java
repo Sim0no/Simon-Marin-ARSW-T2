@@ -3,7 +3,7 @@ package edu.eci.arsw.parcial.models;
 import org.json.JSONObject;
 
 /**
- * Es un modelo que se utiliza para manipular más rapido los JSONObject asociados a las provincias
+ * Clase que representa las estadisticas por pais.
  */
 public class Country {
     private JSONObject jsonObject;

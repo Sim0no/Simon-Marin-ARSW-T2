@@ -11,42 +11,43 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 @Service
 public class CoronavirusStatsCache {
-    ConcurrentHashMap<String,CountryCache> cache;
+    ConcurrentHashMap<String,CountryCache> diccionario;
 
     public CoronavirusStatsCache(){
-        cache = new ConcurrentHashMap<>();
+
+        diccionario = new ConcurrentHashMap<>();
     }
     /**
      *
-     * @param key Es el nombre del pais el cual se usará como llave para encontrarlo en el caché
+     * @param llave Nombre del pais a encontrar en cache
      * @return Retorna si el aeropuerto ya se encuentra en caché
      */
-    public boolean estaEnCache(String key){
-        CountryCache temporal = cache.get(key);
-        if (temporal!=null && LocalDateTime.now().isAfter(temporal.tiempoDeCreacion.plusMinutes(5))){
-            cache.remove(key);
+    public boolean estaEnCache(String llave){
+        CountryCache aux = diccionario.get(llave);
+        if (aux!=null && LocalDateTime.now().isAfter(aux.creacion.plusMinutes(5))){
+            diccionario.remove(llave);
         }
-        return cache.get(key)!=null;
+        return diccionario.get(llave)!=null;
     }
 
     /**
      *
-     * @param key Es el nombre del pais el cual se usará como llave para encontrarlo en el caché
-     * @param data Es el JSON en formato de String que se guardará en caché
+     * @param llave Nombre del pais el cual que se almacenará en diccionario
+     * @param valor Valor que se guardará en diccionario
      */
-    public void cargarCache(String key,String data){
-        CountryCache temporal = new CountryCache(data);
-        cache.put(key,temporal);
+    public void cargarCache(String llave,String valor){
+        CountryCache aux = new CountryCache(valor);
+        diccionario.put(llave,aux);
     }
 
     /**
      *
-     * @param key Es el nombre del pais el cual se usará como llave para encontrarlo en el caché
+     * @param llave Nombre del pais a buscar en diccionario.
      * @return Devuelve el objeto donde esta guardado el tiempo de creación en caché y el objeto JSON mapeado en un String
      */
-    public CountryCache devolverCache(String key){
+    public CountryCache devolverCache(String llave){
 
-        return cache.get(key);
+        return diccionario.get(llave);
     }
 
 
