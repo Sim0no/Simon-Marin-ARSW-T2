@@ -1,0 +1,8 @@
+edu\eci\arsw\parcial\persistence\CountryCache.class
+edu\eci\arsw\parcial\CoronovirusApiMain.class
+edu\eci\arsw\parcial\persistence\CoronavirusStatsCache.class
+edu\eci\arsw\parcial\controller\CoronovirusStatsController.class
+edu\eci\arsw\parcial\persistence\CoronavirusStatsException.class
+edu\eci\arsw\parcial\service\HttpConnectionService.class
+edu\eci\arsw\parcial\service\CoronavirusStatsService.class
+edu\eci\arsw\parcial\models\Country.class

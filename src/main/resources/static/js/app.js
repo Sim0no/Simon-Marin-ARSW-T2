@@ -1,5 +1,5 @@
 var app = (function(){
-    var generateTable = function(){
+    var generarTabla = function(){
         apiclient.getCovid19AllCases(crearTabla);
     }
 

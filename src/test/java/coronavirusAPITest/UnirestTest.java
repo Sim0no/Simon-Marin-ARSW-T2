@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import org.apache.http.HttpStatus;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.junit.Test;
 
 import com.mashape.unirest.http.HttpResponse;
@@ -36,4 +38,6 @@ public class UnirestTest {
 		assertNotNull(response.getBody());
 		assertEquals((int)HttpStatus.SC_OK,response.getStatus());
 	}
+
+
 }
