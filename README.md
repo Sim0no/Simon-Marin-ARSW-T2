@@ -1,5 +1,21 @@
 # Escuela Colombiana de Ingeniería Julio Garavito - Arquitecturas de Software ARSW - Parcial Segundo Tercio
 
+
+## Germán Simón Marín Mejía
+## Requerimientos
+1) [Link a Apk en Heroku](https://simon-marin-arsw-t2.herokuapp.com/) y el 
+[Link repositorio Github](https://github.com/Sim0no/Simon-Marin-ARSW-T2)
+2) Javadoc generado en el proyecto (\Documentacion)
+3)
+    * La que se usa es Cliente/Servidor, teninendo el JavaScript que consume como cliente y un Java que ofrece servicios de cliente y consume una API como cliente.
+    * El programa se ejecuta localmente con el comando spring-boot:run o desde la clase CoronavirusApiMain.
+    * Se puede extender creando un nuevo HTTPConection, el cual puede consultar otras APIs.
+    * [Link a Aplicación de Heroku](https://simon-marin-arsw-t2.herokuapp.com/)
+    * Se realizó bono del cache
+    ## Evidencias
+    ![img1](img/cache1.png)
+    ![img2](img/cache2.png)
+
 ## Preparación para el Parcial
 
 Con el objetivo de preparar el examen final del segundo tercio, por favor siga las siguientes instrucciones.
